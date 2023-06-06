@@ -168,6 +168,13 @@ public class SmartHomeClient {
         }).start();
     }
 
+    /**
+     * publish to change light topic to change a light in areaId
+     * @param client
+     * @param areaId
+     * @param deviceId
+     * @param lightMessage
+     */
     private void publishToChangeLightTopic(IMqttClient client, String areaId, String deviceId, LightMessage lightMessage){
         new Thread(() -> {
             try {
